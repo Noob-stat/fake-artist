@@ -1,0 +1,12 @@
+# One-click free deploy on Render (https://render.com).
+# In Render: New + > Blueprint > connect this repo. It reads this file.
+services:
+  - type: web
+    name: fake-artist
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
